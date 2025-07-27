@@ -57,15 +57,8 @@ jobs:
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark
       run: |
         rm -rf site
-        python3 scripts/logs2html.py test_result site
-
-    - name: Detect BENCH_DIR
-      working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks
-      run: |
-        latest=$(ls -1d 20*/ | sort -r | head -n1 | tr -d '/')
-        echo "BENCH_DIR=$PWD/$latest"   >> "$GITHUB_ENV"
-        echo "BENCH_DATE=$latest"       >> "$GITHUB_ENV"
-        echo "[debug] BENCH_DIR = $PWD/$latest"
+        run_root="${{ env.BENCH_DIR }}"
+        python3 scripts/logs2html.py test_result $run_root/
 
     - name: Update benchmarks/latest redirect
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks
