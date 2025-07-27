@@ -40,10 +40,8 @@ jobs:
     - name: Set BENCH_DATE and BENCH_DIR
       run: |
         bench_date=$(date +'%Y-%m-%d')
-        echo "BENCH_DATE=$bench_date" \
-          >> "$GITHUB_ENV"
-        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" \
-          >> "$GITHUB_ENV"
+        echo "BENCH_DATE=$bench_date" >> "$GITHUB_ENV"
+        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" >> "$GITHUB_ENV"
 
     # ------------------------------------------------------------
     # 3-5) (UNCHANGED) upload raw logs, convert to HTML, deploy Pages
@@ -87,31 +85,33 @@ jobs:
       run: |
         run_root="${{ env.BENCH_DIR }}"
         mkdir -p "$run_root"
+
         cat > "$run_root/index.html" <<'EOF'
         ---
         layout: default
         title: Benchmark run
         ---
+
         <h1>Benchmark results</h1>
+
         <ul>
-        {% assign here = page.dir %}
         {% for f in site.static_files %}
-          {% if f.path startswith here and f.extname == ".html" and f.name != "index.html" %}
+          {% if f.path contains page.dir and f.name != "index.html" and f.extname == ".html" %}
             <li><a href="/{{ f.path }}">{{ f.name }}</a></li>
           {% endif %}
         {% endfor %}
         </ul>
         EOF
 
+
     - name: Push benchmark results
       uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.BUDDY_SITE_PAT }}
         external_repository: buddy-compiler/buddy-compiler.github.io
-        publish_dir: "${{ env.BENCH_DIR }}"        # the directory we just filled
+        publish_dir: "${{ env.BENCH_DIR }}"          # this now holds index.html + reports
         destination_dir: benchmarks/${{ github.sha }}
         publish_branch: master
         keep_files: true
-        enable_jekyll: true                        # *no* .nojekyll
-        commit_message: "Deploy benchmark results for ${{ github.sha }}"
+        enable_jekyll: true
 
