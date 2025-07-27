@@ -58,7 +58,7 @@ jobs:
       run: |
         rm -rf site
         run_root="${{ env.BENCH_DIR }}"
-        python3 scripts/logs2html.py $run_root
+        python3 scripts/logs2html.py test_result $run_root
 
     - name: Update benchmarks/latest redirect
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks
