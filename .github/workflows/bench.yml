@@ -60,22 +60,16 @@ jobs:
         mkdir -p "${{ env.BENCH_DIR }}"
         python3 scripts/logs2html.py test_result "${{ env.BENCH_DIR }}/"
 
-    - name: Update benchmarks/latest redirect
-      working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks
+    # ------------------------------------------------------------
+    # 4) make /benchmarks/ point to the most recent run as well
+    # ------------------------------------------------------------
+    - name: Add top-level benchmarks index
+      working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site
       run: |
         set -e
-        # -------- pick the most recent dated folder (YYYY-MM-DD) -------------
-        latest=$(ls -1d 20*/ | sort -r | head -n1 | tr -d '/')
-        echo "[Info] newest run is: $latest"
-
-        # -------- rebuild the 'latest' folder with a meta-refresh ------------
-        rm -rf latest
-        mkdir -p latest
-        cat > latest/index.html <<EOF
-        <meta http-equiv="refresh" content="0; url=../${latest}/">
+        cat > benchmarks/index.html <<'EOF'
+        <meta http-equiv="refresh" content="0; url=/benchmarks/latest/">
         EOF
-        echo "[Info] benchmarks/latest now points to ../${latest}/"
-
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
