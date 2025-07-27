@@ -110,7 +110,7 @@ jobs:
       with:
         personal_token: ${{ secrets.BUDDY_SITE_PAT }}
         external_repository: buddy-compiler/buddy-compiler.github.io
-        publish_dir: "${{ env.BENCH_DIR }}"          # this now holds index.html + reports
+        publish_dir: "${{ env.BENCH_DIR }}"
         destination_dir: benchmarks/${{ github.sha }}
         publish_branch: master
         keep_files: true
