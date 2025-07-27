@@ -10,13 +10,13 @@ summary{font-weight:600;cursor:pointer}
 .err{border:2px solid #c00;background:#fee;padding:1rem;border-radius:.5rem}
 </style>
 
-<h2>deeplearning/dl-op-linalg-mathexp-benchmark.json</h2><p><em>2025-06-01 11:51:18 UTC</em></p>
+<h2>deeplearning/dl-op-linalg-mathexp-benchmark.json</h2><p><em>2025-07-27 15:40:04 UTC</em></p>
 <h3>dl-op-linalg-mathexp-benchmark.json</h3>
 <table><tr><th>Name</th><th>Time&nbsp;(ms)</th><th>CPU&nbsp;(ms)</th><th>Iterations</th></tr>
-<tr><td style='text-align:left'>BM_EXP_SCALAR</td><td>0.0456</td><td>0.0456</td><td>15,072</td></tr>
-<tr><td style='text-align:left'>BM_EXP_AutoVectorization</td><td>0.0316</td><td>0.0316</td><td>22,245</td></tr></table>
+<tr><td style='text-align:left'>BM_EXP_SCALAR</td><td>0.0456</td><td>0.0456</td><td>15,225</td></tr>
+<tr><td style='text-align:left'>BM_EXP_AutoVectorization</td><td>0.0316</td><td>0.0316</td><td>22,248</td></tr></table>
 <details><summary>Console output</summary>
-<pre>2025-06-01T09:44:04+00:00
+<pre>2025-07-27T14:27:37+00:00
 Running ./dl-op-linalg-mathexp-benchmark
 Run on (24 X 5100 MHz CPU s)
 CPU Caches:
@@ -24,13 +24,13 @@ CPU Caches:
   L1 Instruction 32 KiB (x12)
   L2 Unified 1280 KiB (x12)
   L3 Unified 30720 KiB (x1)
-Load Average: 1.01, 1.80, 3.84
+Load Average: 1.06, 1.18, 1.29
 ***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
 -------------------------------------------------------------------
 Benchmark                         Time             CPU   Iterations
 -------------------------------------------------------------------
-BM_EXP_SCALAR                 0.046 ms        0.046 ms        15072
-BM_EXP_AutoVectorization      0.032 ms        0.032 ms        22245
+BM_EXP_SCALAR                 0.046 ms        0.046 ms        15225
+BM_EXP_AutoVectorization      0.032 ms        0.032 ms        22248
 -----------------------------------------------------------
 Correctness Verification:
 Transform case: [32mPASS[0m
