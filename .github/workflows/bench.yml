@@ -41,7 +41,7 @@ jobs:
       run: |
         bench_date=$(date +'%Y-%m-%d')
         echo "BENCH_DATE=$bench_date" >> "$GITHUB_ENV"
-        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" >> "$GITHUB_ENV"
+        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date/${GITHUB_SHA}" >> "$GITHUB_ENV"
 
     # ------------------------------------------------------------
     # 3-5) (UNCHANGED) upload raw logs, convert to HTML, deploy Pages
@@ -57,8 +57,8 @@ jobs:
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark
       run: |
         rm -rf site
-        run_root="${{ env.BENCH_DIR }}"
-        python3 scripts/logs2html.py test_result $run_root/
+        mkdir -p "${{ env.BENCH_DIR }}"
+        python3 scripts/logs2html.py test_result "${{ env.BENCH_DIR }}/"
 
     - name: Update benchmarks/latest redirect
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks
@@ -110,9 +110,7 @@ jobs:
       with:
         personal_token: ${{ secrets.BUDDY_SITE_PAT }}
         external_repository: buddy-compiler/buddy-compiler.github.io
-        publish_dir: "${{ env.BENCH_DIR }}"
-        destination_dir: benchmarks/${{ github.sha }}
+        publish_dir: /home/quliu/buddy-complier-workspace/buddy-benchmark/site   # <- root of generated site
         publish_branch: master
-        keep_files: true
+        keep_files: true          # keep earlier runs
         enable_jekyll: true
-
