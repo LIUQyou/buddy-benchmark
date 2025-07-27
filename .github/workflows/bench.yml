@@ -37,10 +37,11 @@ jobs:
         # ------------------------------------------------------------
     # 2½) decide which date folder we’re about to publish
     # ------------------------------------------------------------
-    - name: Set BENCH_DATE env var
+    - name: Set BENCH_DATE and BENCH_DIR
       run: |
-        # Pick today's date (YYYY-MM-DD) - same pattern your scripts use
-        echo "BENCH_DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+        bench_date=$(date +'%Y-%m-%d')
+        echo "BENCH_DATE=$bench_date"  >> "$GITHUB_ENV"
+        echo "BENCH_DIR=/home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" >> "$GITHUB_ENV"
 
     # ------------------------------------------------------------
     # 3-5) (UNCHANGED) upload raw logs, convert to HTML, deploy Pages
@@ -82,16 +83,18 @@ jobs:
 
     - name: Build index.html for this run
       run: |
-        run_root="$BENCH_DIR"
+        run_root="${{ env.BENCH_DIR }}"
+        mkdir -p "$run_root"              # just in case
         cat > "$run_root/index.html" <<'EOF'
-        <!doctype html>
-        <meta charset="utf-8">
-        <title>Buddy-Benchmark run</title>
+        ---
+        layout: default
+        title: Benchmark run
+        ---
         <h1>Benchmark results</h1>
         <ul>
         {% for f in site.static_files %}
           {% if f.path contains page.url and f.extname == ".html"
-                  and f.name != "index.html" %}
+                and f.name != "index.html" %}
             <li><a href="/{{ f.path }}">{{ f.name }}</a></li>
           {% endif %}
         {% endfor %}
@@ -100,19 +103,13 @@ jobs:
 
     - name: Push benchmark results
       uses: peaceiris/actions-gh-pages@v4
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       with:
         personal_token: ${{ secrets.BUDDY_SITE_PAT }}
         external_repository: buddy-compiler/buddy-compiler.github.io
-
-        # POINT publish_dir *at the date folder itself* …
-        publish_dir: /home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks/${{ env.BENCH_DATE }}
-
-        # … and mount it under a single benchmarks/<sha>/ folder on Pages
+        publish_dir: "${{ env.BENCH_DIR }}"        # the directory we just filled
         destination_dir: benchmarks/${{ github.sha }}
-
         publish_branch: master
         keep_files: true
-        enable_jekyll: true     # do NOT let the action create .nojekyll
+        enable_jekyll: true                        # *no* .nojekyll
         commit_message: "Deploy benchmark results for ${{ github.sha }}"
 
