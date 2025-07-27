@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-06-01T09:39:22+00:00",
+    "date": "2025-07-27T14:22:54+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-model-whisper-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [2.00244,3.03613,4.84424],
+    "load_avg": [1.44971,1.40479,1.39941],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -46,8 +46,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 7.9215591410174966e+04,
-      "cpu_time": 7.9212764204999999e+04,
+      "real_time": 7.9983285805210471e+04,
+      "cpu_time": 7.9980347596000007e+04,
       "time_unit": "ms"
     },
     {
@@ -60,8 +60,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 3.6910132765769958e+04,
-      "cpu_time": 3.6904499842000005e+04,
+      "real_time": 3.6713125728070736e+04,
+      "cpu_time": 3.6699949372999996e+04,
       "time_unit": "ms"
     }
   ]

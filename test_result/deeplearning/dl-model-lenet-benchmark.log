@@ -1,4 +1,4 @@
-2025-06-01T09:39:21+00:00
+2025-07-27T14:22:52+00:00
 Running ./dl-model-lenet-benchmark
 Run on (24 X 5100 MHz CPU s)
 CPU Caches:
@@ -6,14 +6,14 @@ CPU Caches:
   L1 Instruction 32 KiB (x12)
   L2 Unified 1280 KiB (x12)
   L3 Unified 30720 KiB (x1)
-Load Average: 2.00, 3.05, 4.86
+Load Average: 1.40, 1.39, 1.40
 ***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
 -----------------------------------------------------------------------------
 Benchmark                                   Time             CPU   Iterations
 -----------------------------------------------------------------------------
-DL_MODEL_LENET/Auto_Vectorization       0.161 ms        0.161 ms         4427
-DL_MODEL_LENET/Buddy_Vectorization      0.136 ms        0.136 ms         5106
+DL_MODEL_LENET/Auto_Vectorization       0.165 ms        0.165 ms         4304
+DL_MODEL_LENET/Buddy_Vectorization      0.137 ms        0.137 ms         5022
 -----------------------------------------------------------
 Correctness Verification:
-Transform case: [32mPASS[0m
+Transform case: [31mFAIL[0m
 -----------------------------------------------------------

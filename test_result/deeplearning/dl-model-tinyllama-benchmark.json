@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-06-01T09:33:00+00:00",
+    "date": "2025-07-27T14:17:33+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-model-tinyllama-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [2.75537,5.10107,6.17822],
+    "load_avg": [1.70264,1.92041,1.53662],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -46,8 +46,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 1.7263756665587425e+05,
-      "cpu_time": 1.7263429748099999e+05,
+      "real_time": 1.3918454140797257e+05,
+      "cpu_time": 1.3917853827299998e+05,
       "time_unit": "ms"
     },
     {
@@ -60,8 +60,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 1.0490998193621635e+04,
-      "cpu_time": 1.0490786658000019e+04,
+      "real_time": 1.0038352340459824e+04,
+      "cpu_time": 1.0037513700999994e+04,
       "time_unit": "ms"
     },
     {
@@ -74,8 +74,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 8.2188854273408651e+03,
-      "cpu_time": 7.6072349719999866e+03,
+      "real_time": 7.8359359223395586e+03,
+      "cpu_time": 7.2006253560000177e+03,
       "time_unit": "ms"
     }
   ]
