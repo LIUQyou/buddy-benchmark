@@ -40,8 +40,10 @@ jobs:
     - name: Set BENCH_DATE and BENCH_DIR
       run: |
         bench_date=$(date +'%Y-%m-%d')
-        echo "BENCH_DATE=$bench_date"  >> "$GITHUB_ENV"
-        echo "BENCH_DIR=/home/quliu/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" >> "$GITHUB_ENV"
+        echo "BENCH_DATE=$bench_date" \
+          >> "$GITHUB_ENV"
+        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date" \
+          >> "$GITHUB_ENV"
 
     # ------------------------------------------------------------
     # 3-5) (UNCHANGED) upload raw logs, convert to HTML, deploy Pages
@@ -81,10 +83,10 @@ jobs:
       with:
         path: /home/quliu/buddy-complier-workspace/buddy-benchmark/site
 
-    - name: Build index.html for this run
+    - name: Build landing page for this run
       run: |
         run_root="${{ env.BENCH_DIR }}"
-        mkdir -p "$run_root"              # just in case
+        mkdir -p "$run_root"
         cat > "$run_root/index.html" <<'EOF'
         ---
         layout: default
@@ -92,9 +94,9 @@ jobs:
         ---
         <h1>Benchmark results</h1>
         <ul>
+        {% assign here = page.dir %}
         {% for f in site.static_files %}
-          {% if f.path contains page.url and f.extname == ".html"
-                and f.name != "index.html" %}
+          {% if f.path startswith here and f.extname == ".html" and f.name != "index.html" %}
             <li><a href="/{{ f.path }}">{{ f.name }}</a></li>
           {% endif %}
         {% endfor %}
