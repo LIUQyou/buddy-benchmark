@@ -1,3 +1,4 @@
 [Failed]  Build of 'dl-model-tinyllama-benchmark'
 [Failed]  Build of 'dl-model-mobilenetv3-benchmark'
 [Success] Build of 'dl-model-lenet-benchmark'
+[Failed]  Build of 'dl-model-bert-benchmark'

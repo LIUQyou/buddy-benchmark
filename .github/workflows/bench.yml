@@ -80,8 +80,8 @@ jobs:
         rm -rf latest
         mkdir -p latest
         cat > latest/index.html <<EOF
-        <meta http-equiv="refresh" content="0; url=../${latest}/">
-        EOF
+<meta http-equiv="refresh" content="0; url=../${latest}/">
+EOF
         echo "[Info] benchmarks/latest now points to ../${latest}/"
 
     # ------------------------------------------------------------
@@ -92,8 +92,8 @@ jobs:
       run: |
         set -e
         cat > benchmarks/index.html <<'EOF'
-        <meta http-equiv="refresh" content="0; url=/benchmarks/latest/">
-        EOF
+<meta http-equiv="refresh" content="0; url=/benchmarks/latest/">
+EOF
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
@@ -106,22 +106,22 @@ jobs:
         mkdir -p "$run_root"
 
         cat > "$run_root/index.html" <<'EOF'
-        ---
-        layout: default
-        title: Benchmark run
-        nav_exclude: true
-        ---
+---
+layout: default
+title: Benchmark run
+nav_exclude: true
+---
 
-        <h1>Benchmark results</h1>
+<h1>Benchmark results</h1>
 
-        <ul>
-        {% for f in site.static_files %}
-          {% if f.path contains page.dir and f.name != "index.html" and f.extname == ".html" %}
-            <li><a href="{{ f.path }}">{{ f.name }}</a></li>
-          {% endif %}
-        {% endfor %}
-        </ul>
-        EOF
+<ul>
+{% for f in site.static_files %}
+  {% if f.path contains page.dir and f.name != "index.html" and f.extname == ".html" %}
+    <li><a href="{{ f.path }}">{{ f.name }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+EOF
 
 
     - name: Build top-level benchmarks index (list all runs)
@@ -132,13 +132,13 @@ jobs:
         mkdir -p benchmarks
         {
           cat <<'HTML'
-          ---
-          layout: default
-          title: Benchmarks
-          ---
-          <h1>Benchmark runs</h1>
-          <p>Select a date and commit:</p>
-          HTML
+---
+layout: default
+title: Benchmarks
+---
+<h1>Benchmark runs</h1>
+<p>Select a date and commit:</p>
+HTML
 
           # List dates newest first
           for d in $(ls -1d benchmarks/20*/ | sort -r); do
