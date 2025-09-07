@@ -1,4 +1,4 @@
-2025-07-27T14:27:29+00:00
+2025-09-07T12:46:11+00:00
 Running ./dl-op-linalg-arithnegf-benchmark
 Run on (24 X 5100 MHz CPU s)
 CPU Caches:
@@ -6,13 +6,13 @@ CPU Caches:
   L1 Instruction 32 KiB (x12)
   L2 Unified 1280 KiB (x12)
   L3 Unified 30720 KiB (x1)
-Load Average: 1.07, 1.18, 1.30
+Load Average: 2.40, 3.26, 5.04
 ***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
 --------------------------------------------------------------------
 Benchmark                          Time             CPU   Iterations
 --------------------------------------------------------------------
-BM_NEGF_SCALAR                 0.023 ms        0.023 ms        30969
-BM_NEGF_AutoVectorization      0.002 ms        0.002 ms       277205
+BM_NEGF_SCALAR                 0.024 ms        0.024 ms        29588
+BM_NEGF_AutoVectorization      0.003 ms        0.003 ms       237464
 -----------------------------------------------------------
 Correctness Verification:
 Transform case: [32mPASS[0m

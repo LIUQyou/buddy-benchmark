@@ -86,24 +86,15 @@ for js in src.rglob("*.json"):
     page.write_text("\n".join(body))
 
 # ---------------------------------------------------------------------------
-# ❶  choose a dated sub-folder for this run
-# ---------------------------------------------------------------------------
-run_dir = dst / "benchmarks" / datetime.date.today().isoformat()
-run_dir.mkdir(parents=True, exist_ok=True)
-
-# ---------------------------------------------------------------------------
-# ❷  collect links to every HTML page we just generated
+# Build a simple index in the destination root (dst)
 # ---------------------------------------------------------------------------
 links = "\n".join(
-    f'<li><a href="{p.relative_to(run_dir).as_posix()}">'
-    f'{p.relative_to(run_dir).as_posix()}</a></li>'
-    for p in sorted(run_dir.rglob("*.html"))        # inside today's folder
-    if p.name != "index.html"                       # skip the index itself
+    f'<li><a href="{p.relative_to(dst).as_posix()}">'
+    f'{p.relative_to(dst).as_posix()}</a></li>'
+    for p in sorted(dst.rglob("*.html"))
+    if p.name != "index.html"
 )
 
-# ---------------------------------------------------------------------------
-# ❸  write (or overwrite) today’s index page
-# ---------------------------------------------------------------------------
-(run_dir / "index.html").write_text(
+(dst / "index.html").write_text(
     CSS + f"<h1>Buddy-Benchmark results</h1><ul>\n{links}\n</ul>"
 )

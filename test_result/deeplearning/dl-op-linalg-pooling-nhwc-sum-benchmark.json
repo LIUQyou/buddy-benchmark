@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:27:11+00:00",
+    "date": "2025-09-07T12:45:52+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-op-linalg-pooling-nhwc-sum-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.09277,1.19434,1.3042],
+    "load_avg": [2.44434,3.3335,5.09961],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3002,
-      "real_time": 2.3286467260475718e-01,
-      "cpu_time": 2.3285699133910728e-01,
+      "iterations": 2922,
+      "real_time": 2.4033439441913615e-01,
+      "cpu_time": 2.4032710540725533e-01,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 16950,
-      "real_time": 4.1440313236903302e-02,
-      "cpu_time": 4.1438350265486736e-02,
+      "iterations": 16330,
+      "real_time": 4.2958081279586446e-02,
+      "cpu_time": 4.2957538089406000e-02,
       "time_unit": "ms"
     }
   ]

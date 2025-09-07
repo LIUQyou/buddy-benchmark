@@ -8,9 +8,8 @@
          ↳ stdout/stderr → dl-model-lenet-benchmark.log
          ↳ gbench JSON   → dl-model-lenet-benchmark.json
 [Missing] Executable not found for 'dl-model-bert-benchmark'
-[Success] Run of 'dl-model-whisper-benchmark'
-         ↳ stdout/stderr → dl-model-whisper-benchmark.log
-         ↳ gbench JSON   → dl-model-whisper-benchmark.json
+[Failed]  Run of 'dl-model-whisper-benchmark'
+         ↳ stdout/stderr → dl-model-whisper-benchmark.log (may contain errors)
 [Success] Run of 'dl-model-resnet18-benchmark'
          ↳ stdout/stderr → dl-model-resnet18-benchmark.log
          ↳ gbench JSON   → dl-model-resnet18-benchmark.json

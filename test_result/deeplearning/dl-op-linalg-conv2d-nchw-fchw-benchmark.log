@@ -1,4 +1,4 @@
-2025-07-27T14:27:06+00:00
+2025-09-07T12:45:47+00:00
 Running ./dl-op-linalg-conv2d-nchw-fchw-benchmark
 Run on (24 X 5100 MHz CPU s)
 CPU Caches:
@@ -6,13 +6,13 @@ CPU Caches:
   L1 Instruction 32 KiB (x12)
   L2 Unified 1280 KiB (x12)
   L3 Unified 30720 KiB (x1)
-Load Average: 1.10, 1.20, 1.31
+Load Average: 2.48, 3.36, 5.12
 ***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
 -------------------------------------------------------------------
 Benchmark                         Time             CPU   Iterations
 -------------------------------------------------------------------
-BM_Conv2DNchwFchw_SCALAR        283 ms          283 ms            2
-BM_Conv2DNchwFchw_Im2col       6.80 ms         6.80 ms          101
+BM_Conv2DNchwFchw_SCALAR        291 ms          291 ms            2
+BM_Conv2DNchwFchw_Im2col       8.56 ms         8.56 ms           72
 -----------------------------------------------------------
 Correctness Verification:
 Transform case: [32mPASS[0m

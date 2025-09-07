@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:26:55+00:00",
+    "date": "2025-09-07T12:45:36+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-op-linalg-matmul-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.03271,1.1875,1.3042],
+    "load_avg": [2.47656,3.38623,5.14551],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -46,8 +46,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 3.9328473061323166e+03,
-      "cpu_time": 3.9326995480000000e+03,
+      "real_time": 4.0999811291694641e+03,
+      "cpu_time": 4.0998556719999997e+03,
       "time_unit": "ms"
     },
     {
@@ -60,8 +60,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 3.2123229391872883e+03,
-      "cpu_time": 3.2121668160000004e+03,
+      "real_time": 3.5827754400670528e+03,
+      "cpu_time": 3.5826578559999998e+03,
       "time_unit": "ms"
     },
     {
@@ -74,8 +74,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 1.1747585423290730e+02,
-      "cpu_time": 1.1746541299999969e+02,
+      "real_time": 1.0819802060723305e+02,
+      "cpu_time": 1.0819740099999997e+02,
       "time_unit": "ms"
     },
     {
@@ -88,8 +88,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 5.9880897402763367e+01,
-      "cpu_time": 5.9877095000000047e+01,
+      "real_time": 6.1437729746103287e+01,
+      "cpu_time": 6.1437198000000137e+01,
       "time_unit": "ms"
     },
     {
@@ -102,8 +102,8 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 2.1973790600895882e+01,
-      "cpu_time": 9.1101149999994746e+00,
+      "real_time": 1.8467400223016739e+01,
+      "cpu_time": 7.8750589999998510e+00,
       "time_unit": "ms"
     }
   ]

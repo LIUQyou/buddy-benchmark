@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:27:31+00:00",
+    "date": "2025-09-07T12:46:13+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-op-linalg-arithsubf-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.06592,1.18066,1.29639],
+    "load_avg": [2.39795,3.2627,5.03809],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 23509,
-      "real_time": 2.9357210888091442e-02,
-      "cpu_time": 2.9356123654770513e-02,
+      "iterations": 22687,
+      "real_time": 3.0744381588195889e-02,
+      "cpu_time": 3.0743076916295679e-02,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 175223,
-      "real_time": 3.9904742644157176e-03,
-      "cpu_time": 3.9903206884940911e-03,
+      "iterations": 170328,
+      "real_time": 4.1076257294038214e-03,
+      "cpu_time": 4.1075212472406180e-03,
       "time_unit": "ms"
     }
   ]

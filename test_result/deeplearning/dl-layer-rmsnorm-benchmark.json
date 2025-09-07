@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:26:53+00:00",
+    "date": "2025-09-07T12:45:34+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-layer-rmsnorm-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.03271,1.1875,1.3042],
+    "load_avg": [2.47656,3.38623,5.14551],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 356202,
-      "real_time": 1.9603331904748766e-03,
-      "cpu_time": 1.9603087601978656e-03,
+      "iterations": 339474,
+      "real_time": 1.9830409605425532e-03,
+      "cpu_time": 1.9829382397473739e-03,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 751546,
-      "real_time": 9.1466103771357563e-04,
-      "cpu_time": 9.1459137830551969e-04,
+      "iterations": 780156,
+      "real_time": 8.9165813354251345e-04,
+      "cpu_time": 8.9162349196827311e-04,
       "time_unit": "ms"
     }
   ]

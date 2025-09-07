@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:26:49+00:00",
+    "date": "2025-09-07T12:45:30+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-layer-ffn-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.03564,1.19092,1.30615],
+    "load_avg": [2.51807,3.40967,5.1626],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 10762,
-      "real_time": 6.5369959010264392e-02,
-      "cpu_time": 6.5368221055565889e-02,
+      "iterations": 10218,
+      "real_time": 6.7533425334895703e-02,
+      "cpu_time": 6.7531935701702864e-02,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 25673,
-      "real_time": 2.7106251964175147e-02,
-      "cpu_time": 2.7104521248003739e-02,
+      "iterations": 26193,
+      "real_time": 2.6626899614870417e-02,
+      "cpu_time": 2.6626213683045089e-02,
       "time_unit": "ms"
     }
   ]

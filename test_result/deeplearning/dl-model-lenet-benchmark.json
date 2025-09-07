@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:22:52+00:00",
+    "date": "2025-09-07T12:41:48+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-model-lenet-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.40137,1.39453,1.396],
+    "load_avg": [3.67334,4.12793,5.80713],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4304,
-      "real_time": 1.6466251636775675e-01,
-      "cpu_time": 1.6464831319702602e-01,
+      "iterations": 4111,
+      "real_time": 1.7333792885473193e-01,
+      "cpu_time": 1.7333462247628315e-01,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 5022,
-      "real_time": 1.3717319905366238e-01,
-      "cpu_time": 1.3716751294305060e-01,
+      "iterations": 4846,
+      "real_time": 1.4355380335623599e-01,
+      "cpu_time": 1.4355146595130003e-01,
       "time_unit": "ms"
     }
   ]

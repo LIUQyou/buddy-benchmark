@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-07-27T14:27:39+00:00",
+    "date": "2025-09-07T12:46:21+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./dl-op-linalg-softmax-exp-sum-div-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [1.05566,1.17383,1.29248],
+    "load_avg": [2.49072,3.25391,5.01562],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 121646,
-      "real_time": 5.6556810458011850e-03,
-      "cpu_time": 5.6554908093977606e-03,
+      "iterations": 120007,
+      "real_time": 5.8092399238988792e-03,
+      "cpu_time": 5.8089997500145821e-03,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 181826,
-      "real_time": 3.8511731632752664e-03,
-      "cpu_time": 3.8510635992652325e-03,
+      "iterations": 176914,
+      "real_time": 3.9636845145346869e-03,
+      "cpu_time": 3.9634847383474463e-03,
       "time_unit": "ms"
     }
   ]
