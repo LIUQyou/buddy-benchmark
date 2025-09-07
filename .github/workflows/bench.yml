@@ -101,6 +101,7 @@ jobs:
         ---
         layout: default
         title: Benchmark run
+        nav_exclude: true
         ---
 
         <h1>Benchmark results</h1>
@@ -114,6 +115,37 @@ jobs:
         </ul>
         EOF
 
+
+    - name: Build top-level benchmarks index (list all runs)
+      working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site
+      run: |
+        set -e
+        out=benchmarks/index.html
+        mkdir -p benchmarks
+        {
+          cat <<'HTML'
+          ---
+          layout: default
+          title: Benchmarks
+          ---
+          <h1>Benchmark runs</h1>
+          <p>Select a date and commit:</p>
+          HTML
+
+          # List dates newest first
+          for d in $(ls -1d benchmarks/20*/ | sort -r); do
+            d=${d%/}
+            echo "<h2>${d#benchmarks/}</h2>"
+            echo "<ul>"
+            # List shas newest first if timestamps exist; otherwise lexicographic
+            for sha in $(ls -1d "$d"/*/ 2>/dev/null | sort -r); do
+              sha=${sha%/}
+              rel=${sha#benchmarks/}
+              echo "  <li><a href=\"/benchmarks/${rel}/\">${rel}</a></li>"
+            done
+            echo "</ul>"
+          done
+        } > "$out"
 
     - name: Push benchmark results
       uses: peaceiris/actions-gh-pages@v4
