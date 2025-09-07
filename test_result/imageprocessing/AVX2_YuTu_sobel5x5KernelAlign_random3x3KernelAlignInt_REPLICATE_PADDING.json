@@ -245,7 +245,8 @@
       "real_time": 9.4657656001417256e-01,
       "cpu_time": 9.4650936842105216e-01,
       "time_unit": "ms"
-    }    {
+    },
+    {
       "name": "OpenCV_Erode2D_Constant_Padding/1",
       "family_index": 15,
       "per_family_instance_index": 0,
@@ -254,9 +255,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4117,
-      "real_time": 1.6993736472267648e-01,
-      "cpu_time": 1.6993461015302383e-01,
+      "iterations": 4886,
+      "real_time": 1.4358902494169579e-01,
+      "cpu_time": 1.4358145968072070e-01,
       "time_unit": "ms"
     },
     {
@@ -268,8 +269,80 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2816,
-      "real_time": 2.4825724275698038e-01,
-      "cpu_time": 2.4825158025568175e-01,
+      "iterations": 2978,
+      "real_time": 2.3539010072571068e-01,
+      "cpu_time": 2.3538351511081329e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_Closing2D_Constant_Padding/1",
+      "family_index": 17,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_Closing2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2979,
+      "real_time": 2.3258523218341223e-01,
+      "cpu_time": 2.3257072171869730e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_TopHat2D_Constant_Padding/1",
+      "family_index": 18,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_TopHat2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2603,
+      "real_time": 2.6823798372706131e-01,
+      "cpu_time": 2.6822945024971095e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_BottomHat2D_Constant_Padding/1",
+      "family_index": 19,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_BottomHat2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2574,
+      "real_time": 2.7231369876731898e-01,
+      "cpu_time": 2.7229450038850062e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_MorphGrad2D_Constant_Padding/1",
+      "family_index": 20,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_MorphGrad2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2619,
+      "real_time": 2.6665248173072437e-01,
+      "cpu_time": 2.6664444520809394e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_Dilate2D_Constant_Padding/1",
+      "family_index": 21,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_Dilate2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 4960,
+      "real_time": 1.4122858448254486e-01,
+      "cpu_time": 1.4122089999999995e-01,
       "time_unit": "ms"
     }
+  ]
+}

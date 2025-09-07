@@ -85,11 +85,7 @@ jobs:
     # ------------------------------------------------------------
     # 4) make /benchmarks/ point to the most recent run as well
     # ------------------------------------------------------------
-    - name: Add top-level benchmarks index
-      working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site
-      run: |
-        set -e
-        printf '%s\n' "<meta http-equiv=\"refresh\" content=\"0; url=/benchmarks/latest/\">" > benchmarks/index.html
+    # (Removed) previous redirect-only index; replaced by full listing below
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
@@ -132,6 +128,7 @@ jobs:
             '---' \
             'layout: default' \
             'title: Benchmarks' \
+            'nav_exclude: true' \
             '---' \
             '<h1>Benchmark runs</h1>' \
             '<p>Select a date and commit:</p>'
