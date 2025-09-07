@@ -33,7 +33,15 @@ jobs:
     # ------------------------------------------------------------
     - name: Build & run benchmarks
       run: |
-        /home/quliu/buddy-complier-workspace/run_docker.sh
+        set -e
+        TEST_DIR=/home/quliu/buddy-complier-workspace/buddy-benchmark/test_result
+        if [ -d "$TEST_DIR" ] && [ "$(find "$TEST_DIR" -type f | wc -l)" -gt 0 ]; then
+          echo "[Skip] $TEST_DIR already has benchmark outputs; skipping build/run."
+          echo "[Info] File count: $(find "$TEST_DIR" -type f | wc -l)"
+        else
+          echo "[Run] No existing results detected; running benchmarks in Docker."
+          /home/quliu/buddy-complier-workspace/run_docker.sh
+        fi
         # ------------------------------------------------------------
     # 2½) decide which date folder we’re about to publish
     # ------------------------------------------------------------
