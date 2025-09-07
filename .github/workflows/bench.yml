@@ -5,6 +5,14 @@ on:
   push:            # fire on any branch
     branches: ['**']
   pull_request:
+  workflow_dispatch:
+    inputs:
+      upstream_repo:
+        description: "Which repo changed (mlir|benchmark)"
+        required: false
+      upstream_sha:
+        description: "Upstream commit SHA for result folder"
+        required: false
 
 jobs:
   bench:
@@ -48,8 +56,10 @@ jobs:
     - name: Set BENCH_DATE and BENCH_DIR
       run: |
         bench_date=$(date +'%Y-%m-%d')
+        # Prefer a passed upstream SHA, otherwise use this workflow's SHA
+        run_sha="${{ github.event.inputs.upstream_sha || github.sha }}"
         echo "BENCH_DATE=$bench_date" >> "$GITHUB_ENV"
-        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date/${GITHUB_SHA}" >> "$GITHUB_ENV"
+        echo "BENCH_DIR=$HOME/buddy-complier-workspace/buddy-benchmark/site/benchmarks/$bench_date/${run_sha}" >> "$GITHUB_ENV"
 
     # ------------------------------------------------------------
     # 3-5) (UNCHANGED) upload raw logs, convert to HTML, deploy Pages
