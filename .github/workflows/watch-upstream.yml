@@ -24,7 +24,15 @@ jobs:
 
       - name: Create/switch to automation-state branch
         run: |
-          git checkout -B automation-state
+          set -e
+          git fetch origin automation-state || true
+          if git show-ref --verify --quiet refs/remotes/origin/automation-state; then
+            # Start from the remote state branch to avoid non-ff push
+            git checkout -B automation-state origin/automation-state
+          else
+            # First run: create a new state branch from current HEAD
+            git checkout -B automation-state
+          fi
 
       - name: Get upstream HEAD SHAs
         id: head
@@ -66,13 +74,17 @@ jobs:
       - name: Update state branch
         if: steps.decide.outputs.changed == 'true'
         run: |
+          set -e
           printf "%s" "${{ steps.head.outputs.mlir }}" > mlir.sha
           printf "%s" "${{ steps.head.outputs.bench }}" > bench.sha
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add mlir.sha bench.sha
           git commit -m "state: mlir=${{ steps.head.outputs.mlir }} bench=${{ steps.head.outputs.bench }}" || echo "no changes"
-          git push origin HEAD:automation-state
+          # Re-sync and push with lease to avoid non-ff failures if remote advanced
+          git fetch origin automation-state || true
+          git rebase origin/automation-state || true
+          git push --force-with-lease=refs/heads/automation-state origin HEAD:automation-state
 
       - name: Dispatch bench.yml in this repo
         if: steps.decide.outputs.changed == 'true'
