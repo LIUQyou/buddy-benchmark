@@ -28,6 +28,29 @@ Buddy_TopHat2D_Constant_Padding/1                      0.954 ms        0.954 ms 
 Buddy_BottomHat2D_Constant_Padding/1                   0.956 ms        0.956 ms          712
 OpenCV_Erode2D_Constant_Padding/1                      0.141 ms        0.141 ms         4941
 OpenCV_Opening2D_Constant_Padding/1                    0.226 ms        0.226 ms         3094
-OpenCV_Closing2D_Constant_Padding/1                    0.220 ms        0.220 ms         3186
-OpenCV_TopHat2D_Constant_Padding/1                     0.263 ms        0.263 ms         2722
-OpenCV_BottomHat2D_Constant_Padding/1                  0.265 ms        0.265 ms         2637
+OpenCV_Closing2D_Constant_Padding/1                    0.227 ms        0.227 ms         3097
+OpenCV_TopHat2D_Constant_Padding/1                     0.265 ms        0.265 ms         2642
+OpenCV_BottomHat2D_Constant_Padding/1                  0.264 ms        0.264 ms         2635
+OpenCV_MorphGrad2D_Constant_Padding/1                  0.261 ms        0.261 ms         2666
+OpenCV_Dilate2D_Constant_Padding/1                     0.143 ms        0.143 ms         4900
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.
+Saved PNG file.

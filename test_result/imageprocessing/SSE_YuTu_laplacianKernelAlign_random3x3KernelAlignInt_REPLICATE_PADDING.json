@@ -273,7 +273,7 @@
       "real_time": 2.2559705339059108e-01,
       "cpu_time": 2.2558599385908198e-01,
       "time_unit": "ms"
-    }
+    },
     {
       "name": "OpenCV_Closing2D_Constant_Padding/1",
       "family_index": 17,
@@ -283,9 +283,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3186,
-      "real_time": 2.1989222520077220e-01,
-      "cpu_time": 2.1989068173258070e-01,
+      "iterations": 3097,
+      "real_time": 2.2691802094934985e-01,
+      "cpu_time": 2.2690593283823002e-01,
       "time_unit": "ms"
     },
     {
@@ -297,9 +297,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2722,
-      "real_time": 2.6317579229687349e-01,
-      "cpu_time": 2.6317380529022705e-01,
+      "iterations": 2642,
+      "real_time": 2.6526975668938568e-01,
+      "cpu_time": 2.6526233232399676e-01,
       "time_unit": "ms"
     },
     {
@@ -311,8 +311,38 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2637,
-      "real_time": 2.6459206470631269e-01,
-      "cpu_time": 2.6458999696624969e-01,
+      "iterations": 2635,
+      "real_time": 2.6353473653150916e-01,
+      "cpu_time": 2.6351631650853868e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_MorphGrad2D_Constant_Padding/1",
+      "family_index": 20,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_MorphGrad2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 2666,
+      "real_time": 2.6146747557542777e-01,
+      "cpu_time": 2.6145232070517682e-01,
+      "time_unit": "ms"
+    },
+    {
+      "name": "OpenCV_Dilate2D_Constant_Padding/1",
+      "family_index": 21,
+      "per_family_instance_index": 0,
+      "run_name": "OpenCV_Dilate2D_Constant_Padding/1",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 4900,
+      "real_time": 1.4341449479059298e-01,
+      "cpu_time": 1.4340792591836732e-01,
       "time_unit": "ms"
     }
+  ]
+}

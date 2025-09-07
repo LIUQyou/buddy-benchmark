@@ -79,9 +79,7 @@ jobs:
         # -------- rebuild the 'latest' folder with a meta-refresh ------------
         rm -rf latest
         mkdir -p latest
-        cat > latest/index.html <<EOF
-        <meta http-equiv="refresh" content="0; url=../${latest}/">
-EOF
+        printf '%s\n' "<meta http-equiv=\"refresh\" content=\"0; url=../${latest}/\">" > latest/index.html
         echo "[Info] benchmarks/latest now points to ../${latest}/"
 
     # ------------------------------------------------------------
@@ -91,9 +89,7 @@ EOF
       working-directory: /home/quliu/buddy-complier-workspace/buddy-benchmark/site
       run: |
         set -e
-        cat > benchmarks/index.html <<'EOF'
-        <meta http-equiv="refresh" content="0; url=/benchmarks/latest/">
-EOF
+        printf '%s\n' "<meta http-equiv=\"refresh\" content=\"0; url=/benchmarks/latest/\">" > benchmarks/index.html
 
     - name: Upload site artifact
       uses: actions/upload-pages-artifact@v3
@@ -105,23 +101,24 @@ EOF
         run_root="${{ env.BENCH_DIR }}"
         mkdir -p "$run_root"
 
-        cat > "$run_root/index.html" <<'EOF'
-        ---
-        layout: default
-        title: Benchmark run
-        nav_exclude: true
-        ---
-
-        <h1>Benchmark results</h1>
-
-        <ul>
-        {% for f in site.static_files %}
-          {% if f.path contains page.dir and f.name != "index.html" and f.extname == ".html" %}
-            <li><a href="{{ f.path }}">{{ f.name }}</a></li>
-          {% endif %}
-        {% endfor %}
-        </ul>
-EOF
+        {
+          printf '%s\n' \
+            '---' \
+            'layout: default' \
+            'title: Benchmark run' \
+            'nav_exclude: true' \
+            '---' \
+            '' \
+            '<h1>Benchmark results</h1>' \
+            '' \
+            '<ul>' \
+            '{% for f in site.static_files %}' \
+            '  {% if f.path contains page.dir and f.name != "index.html" and f.extname == ".html" %}' \
+            '    <li><a href="{{ f.path }}">{{ f.name }}</a></li>' \
+            '  {% endif %}' \
+            '{% endfor %}' \
+            '</ul>'
+        } > "$run_root/index.html"
 
 
     - name: Build top-level benchmarks index (list all runs)
@@ -131,14 +128,13 @@ EOF
         out=benchmarks/index.html
         mkdir -p benchmarks
         {
-          cat <<'HTML'
-          ---
-          layout: default
-          title: Benchmarks
-          ---
-          <h1>Benchmark runs</h1>
-          <p>Select a date and commit:</p>
-HTML
+          printf '%s\n' \
+            '---' \
+            'layout: default' \
+            'title: Benchmarks' \
+            '---' \
+            '<h1>Benchmark runs</h1>' \
+            '<p>Select a date and commit:</p>'
 
           # List dates newest first
           for d in $(ls -1d benchmarks/20*/ | sort -r); do

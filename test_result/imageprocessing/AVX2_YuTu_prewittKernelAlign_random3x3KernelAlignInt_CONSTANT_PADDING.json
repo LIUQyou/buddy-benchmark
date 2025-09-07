@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2025-09-07T13:08:44+00:00",
+    "date": "2025-09-07T14:25:01+00:00",
     "host_name": "4ed4bacfe45d",
     "executable": "./bin/image-processing-benchmark",
     "num_cpus": 24,
@@ -32,7 +32,7 @@
         "num_sharing": 24
       }
     ],
-    "load_avg": [3.36963,4.10254,5.83887],
+    "load_avg": [4.38672,3.83301,4.74805],
     "library_build_type": "release"
   },
   "benchmarks": [
@@ -45,9 +45,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 141,
-      "real_time": 4.9913290703127569e+00,
-      "cpu_time": 4.9912880992907809e+00,
+      "iterations": 136,
+      "real_time": 5.0944548702853565e+00,
+      "cpu_time": 5.0941901617647067e+00,
       "time_unit": "ms"
     },
     {
@@ -59,9 +59,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 93,
-      "real_time": 7.5341148642442564e+00,
-      "cpu_time": 7.5340402903225794e+00,
+      "iterations": 92,
+      "real_time": 7.5879288108452503e+00,
+      "cpu_time": 7.5877727717391323e+00,
       "time_unit": "ms"
     },
     {
@@ -73,9 +73,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2162,
-      "real_time": 3.2283163781964480e-01,
-      "cpu_time": 3.2282717576318221e-01,
+      "iterations": 2126,
+      "real_time": 3.2648893102989485e-01,
+      "cpu_time": 3.2648295437441222e-01,
       "time_unit": "ms"
     },
     {
@@ -87,9 +87,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 841,
-      "real_time": 8.3219741474433973e-01,
-      "cpu_time": 8.3218935790725346e-01,
+      "iterations": 810,
+      "real_time": 8.6173117160797119e-01,
+      "cpu_time": 8.6171702345678991e-01,
       "time_unit": "ms"
     },
     {
@@ -101,9 +101,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 536,
-      "real_time": 1.3002738662397684e+00,
-      "cpu_time": 1.3002208395522381e+00,
+      "iterations": 532,
+      "real_time": 1.3098518987347310e+00,
+      "cpu_time": 1.3098337011278192e+00,
       "time_unit": "ms"
     },
     {
@@ -115,9 +115,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4661,
-      "real_time": 1.4891540657627406e-01,
-      "cpu_time": 1.4890615962239859e-01,
+      "iterations": 4693,
+      "real_time": 1.4864658349845142e-01,
+      "cpu_time": 1.4864443596846369e-01,
       "time_unit": "ms"
     },
     {
@@ -129,9 +129,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2568,
-      "real_time": 2.7335639259664812e-01,
-      "cpu_time": 2.7334750467289703e-01,
+      "iterations": 2574,
+      "real_time": 2.7232925843942418e-01,
+      "cpu_time": 2.7232468376068386e-01,
       "time_unit": "ms"
     },
     {
@@ -143,9 +143,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 101674,
-      "real_time": 6.8376584089808075e-03,
-      "cpu_time": 6.8374261954875460e-03,
+      "iterations": 101147,
+      "real_time": 6.9248195898291617e-03,
+      "cpu_time": 6.9247274758519840e-03,
       "time_unit": "ms"
     },
     {
@@ -157,9 +157,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 48511,
-      "real_time": 1.4459907311912134e-02,
-      "cpu_time": 1.4459377027890576e-02,
+      "iterations": 47876,
+      "real_time": 1.4619754012793923e-02,
+      "cpu_time": 1.4619547852786375e-02,
       "time_unit": "ms"
     },
     {
@@ -171,9 +171,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2688,
-      "real_time": 2.5685550090635106e-01,
-      "cpu_time": 2.5684523921130975e-01,
+      "iterations": 1964,
+      "real_time": 3.4232623116426214e-01,
+      "cpu_time": 3.4231908757637480e-01,
       "time_unit": "ms"
     },
     {
@@ -185,9 +185,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2734,
-      "real_time": 2.6675885585467135e-01,
-      "cpu_time": 2.6675183504023386e-01,
+      "iterations": 1987,
+      "real_time": 3.5313764707971351e-01,
+      "cpu_time": 3.5311560694514321e-01,
       "time_unit": "ms"
     },
     {
@@ -199,11 +199,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1483,
-      "real_time": 4.7402130094478040e-01,
-      "cpu_time": 4.7401253742414040e-01,
+      "iterations": 1000,
+      "real_time": 7.3933277651667595e-01,
+      "cpu_time": 7.3929136599999978e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "Buddy_Closing2D_Constant_Padding/1",
       "family_index": 12,
@@ -213,11 +213,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1350,
-      "real_time": 3.9245121732906058e-01,
-      "cpu_time": 3.9244753037037028e-01,
+      "iterations": 1338,
+      "real_time": 6.8773021879752116e-01,
+      "cpu_time": 6.8761599701046450e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "Buddy_TopHat2D_Constant_Padding/1",
       "family_index": 13,
@@ -227,11 +227,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 666,
-      "real_time": 1.0719478924621690e+00,
-      "cpu_time": 1.0719183033033035e+00,
+      "iterations": 449,
+      "real_time": 1.3737666746290329e+00,
+      "cpu_time": 1.3737399821826268e+00,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "Buddy_BottomHat2D_Constant_Padding/1",
       "family_index": 14,
@@ -241,11 +241,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 593,
-      "real_time": 1.1050101011539188e+00,
-      "cpu_time": 1.1049833305227643e+00,
+      "iterations": 451,
+      "real_time": 1.1508310349976145e+00,
+      "cpu_time": 1.1508074767184044e+00,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_Erode2D_Constant_Padding/1",
       "family_index": 15,
@@ -255,11 +255,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4812,
-      "real_time": 1.4599609937354713e-01,
-      "cpu_time": 1.4599082543640898e-01,
+      "iterations": 4246,
+      "real_time": 1.6527650926088422e-01,
+      "cpu_time": 1.6527523033443248e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_Opening2D_Constant_Padding/1",
       "family_index": 16,
@@ -269,11 +269,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3117,
-      "real_time": 2.1899228256445571e-01,
-      "cpu_time": 2.1898928424767403e-01,
+      "iterations": 2717,
+      "real_time": 2.5677720045709945e-01,
+      "cpu_time": 2.5677142694147959e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_Closing2D_Constant_Padding/1",
       "family_index": 17,
@@ -283,11 +283,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3169,
-      "real_time": 2.2265837701497751e-01,
-      "cpu_time": 2.2265226285894635e-01,
+      "iterations": 2783,
+      "real_time": 2.5039162999470799e-01,
+      "cpu_time": 2.5038794178943619e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_TopHat2D_Constant_Padding/1",
       "family_index": 18,
@@ -297,11 +297,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2719,
-      "real_time": 2.5787956823580138e-01,
-      "cpu_time": 2.5787464913571129e-01,
+      "iterations": 2439,
+      "real_time": 2.8731209325614449e-01,
+      "cpu_time": 2.8730276875768884e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_BottomHat2D_Constant_Padding/1",
       "family_index": 19,
@@ -311,11 +311,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2731,
-      "real_time": 2.5586019458023457e-01,
-      "cpu_time": 2.5585493079458066e-01,
+      "iterations": 2429,
+      "real_time": 2.8720653292670473e-01,
+      "cpu_time": 2.8719969699464831e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_MorphGrad2D_Constant_Padding/1",
       "family_index": 20,
@@ -325,11 +325,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2598,
-      "real_time": 2.7497063137826044e-01,
-      "cpu_time": 2.7496818745188600e-01,
+      "iterations": 2460,
+      "real_time": 2.8502542555816773e-01,
+      "cpu_time": 2.8502001626016238e-01,
       "time_unit": "ms"
-    },
+    ,,
     {
       "name": "OpenCV_Dilate2D_Constant_Padding/1",
       "family_index": 21,
@@ -339,9 +339,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4696,
-      "real_time": 1.4943660600221950e-01,
-      "cpu_time": 1.4943375085178881e-01,
+      "iterations": 4294,
+      "real_time": 1.6273279480452199e-01,
+      "cpu_time": 1.6272675011644155e-01,
       "time_unit": "ms"
     }
   ]
